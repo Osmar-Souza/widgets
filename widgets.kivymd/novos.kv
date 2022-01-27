@@ -1,0 +1,83 @@
+#:kivy 2.0
+FloatLayout:
+    orientation:'vertical'
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "top"
+        MDToolbar:
+            title: 'menu de ferramentas'
+            text_color: 0, 0, 1, 1
+    MDFloatingActionButton:
+        icon: "android"
+        md_bg_color: app.theme_cls.primary_color
+        elevation_normal: 12
+        pos_hint: {"center_x": 0.8, "center_y": .6}
+    MDIconButton:
+        icon: "record-circle"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "64sp"
+        pos_hint: {"center_x": 0.8, "center_y": .5}
+            
+    MDIconButton:
+        icon: "pencil"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "32sp"
+        pos_hint: {"center_x": 0.8, "center_y": .7}
+
+    MDIconButton:
+        icon: "content-save"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "32sp"
+        pos_hint: {"center_x": 0.8, "y": .8}
+    MDIconButton:
+        icon: "github"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "64sp"
+        pos_hint: {"center_x": 0.2, "center_y": .6}
+        
+    MDIconButton:
+        icon: "home"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "64sp"
+        pos_hint: {"center_x": 0.2, "center_y": .5}
+        
+    MDIconButton:
+        icon: "camera"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "32sp"
+        pos_hint: {"center_x": 0.2, "center_y": .7}
+
+    MDIconButton:
+        icon: "youtube"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "32sp"
+        pos_hint: {"center_x": 0.2, "y": .8}
+    
+    MDIconButton:
+        icon: "facebook"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "64sp"
+        pos_hint: {"center_x": 0.3, "center_y": .4}
+        
+    MDIconButton:
+        icon: "instagram"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "64sp"
+        pos_hint: {"center_x": 0.4, "center_y": .4}
+        
+    MDIconButton:
+        icon: "menu"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "32sp"
+        pos_hint: {"center_x": 0.5, "center_y": .4}
+
+    MDIconButton:
+        icon: "google-maps"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "32sp"
+        pos_hint: {"center_x": 0.6, "center_y": .4}
+    MDIconButton:
+        icon: "dots-vertical"
+        md_bg_color: app.theme_cls.primary_color
+        #user_font_size: "32sp"
+        pos_hint: {"center_x": 0.7, "center_y": .4}

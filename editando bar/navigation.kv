@@ -1,0 +1,31 @@
+#:kivy 2.0
+BoxLayout:
+    orientation:'vertical'
+    MDToolbar:
+        title: 'Bottom Navbar'
+    MDBottomNavigation:
+        #color stuff
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Python'
+            icon: 'language-python'
+            MDLabel:
+                text: 'Python'
+                halign: 'center'
+        
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Youtube'
+            icon: 'youtube'
+
+            MDLabel:
+                text: 'This is the Youtube screen'
+                halign: 'center'
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Instagram'
+            icon: 'instagram'
+
+            MDLabel:
+                text: 'My instram is @osmarsouza'
+                halign: 'center'

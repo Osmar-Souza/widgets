@@ -1,0 +1,81 @@
+#:kivy 2.0
+#: import XCamera kivy_garden.xcamera.XCamera
+<Gerenciador>:
+    Menu:
+        name: 'menu'
+    CameraClick:
+        name:'cam'
+
+<Menu>:  
+    BoxLayout:
+        orientation:'vertical'
+        padding:150
+        spacing:30       
+        Image:                        
+            source:'nx.png'
+            size_hint_y: None
+            height:60
+            allow_stretch:True
+        Botao:
+            text:'POT'
+            size_hint_y: None
+            height:30
+            allow_stretch:True
+        Botao:
+            text: 'take a photo'
+            on_release:app.root.current = 'cam'
+            size_hint_y: None
+            height:30
+            allow_stretch:True        
+        Botao:
+            text:'Move Marker'
+            size_hint_y: None
+            height:30
+            allow_stretch:True
+        Botao:
+            id: botao
+            text: 'Sair'   #craindo pop no botao sair 
+            on_release:root.confirmacao()
+            size_hint_y: None
+            height:30
+            allow_stretch:True
+    
+<CameraClick>:   
+    BoxLayout:
+        orientation: 'vertical'        
+        Camera:        
+            index: 0
+            id: camera            
+            play: True
+            allow_stretch: True
+            
+        Button:
+            background_normal: 'icons/camera_black.png'  
+            background_down: 'icons/camera_red.png'  
+            border:0,0,0,0 
+            size_hint: [.1,.1]
+            pos_hint:{'center_x':0.5,'center_y':0.059}
+            allow_stretch:True
+            on_press: root.capture()
+        
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "top"
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: None, None
+            size: self.minimum_size
+            MDIconButton:
+                icon: "home"
+                md_bg_color: app.theme_cls.primary_color
+                #user_font_size: "64sp"           
+                on_release:app.root.current = 'menu'
+        
+            MDIconButton:                
+                icon: "menu"
+                md_bg_color: app.theme_cls.primary_color
+                #user_font_size: "32sp"
+                
+        
+        
+       
